@@ -107,8 +107,7 @@ footer {
     header nav {
         order: 1; /* Nav below logo and toggle */
         width: 100%;
-        /* Ensure nav is hidden by default in mobile */
-        display: none;
+        /* Remove display: none from nav */
     }
 
     header nav ul {
@@ -116,10 +115,12 @@ footer {
         width: 100%;
         text-align: center;
         padding-top: 10px;
+        /* Hide ul by default */
+        display: none;
     }
 
     header nav ul.show {
-        display: flex; /* Show menu when 'show' class is present */
+        display: flex; /* Show ul when 'show' class is present */
     }
 
     header nav li {
