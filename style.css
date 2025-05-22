@@ -92,31 +92,26 @@ footer {
 
 /* Basic responsiveness */
 @media(max-width: 768px){
-    header .container,
-    #about .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header li {
-        padding: 10px;
-    }
-
-    #about .passport-photo {
-        margin-bottom: 15px;
-    }
-
-    .container {
-        width: 95%;
-    }
-
     header .container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Logo and toggle in a row */
+        justify-content: space-between; /* Push logo to left, toggle to right */
+        align-items: center;
+        text-align: left;
+        padding: 0 15px;
+    }
+
+    header .logo {
+        margin-bottom: 0;
+    }
+
+    header nav {
+        order: 1; /* Nav below logo and toggle */
+        width: 100%;
+        /* Ensure nav is hidden by default in mobile */
+        display: none;
     }
 
     header nav ul {
-        display: none; /* Hide menu by default on smaller screens */
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -132,8 +127,22 @@ footer {
     }
 
     .menu-toggle {
-        display: flex; /* Show hamburger icon on smaller screens and maintain flex properties */
-        margin-top: 10px; /* Add some space above the button */
+        display: flex; /* Ensure hamburger icon is displayed as flex */
+        margin-top: 0;
+        order: 2; /* Place toggle after logo in flex order */
+    }
+
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .passport-photo {
+        margin-bottom: 15px;
+    }
+
+    .container {
+        width: 95%;
     }
 }
 
