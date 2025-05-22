@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('show');
+            // Optional: Toggle an icon change if needed
+            // menuToggle.querySelector('i').classList.toggle('fa-bars');
+            // menuToggle.querySelector('i').classList.toggle('fa-times');
         });
     }
 }); 
